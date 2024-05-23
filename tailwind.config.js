@@ -4,7 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
     content: ["./*.html", "./*.js"],
-    darkMode: "media",
+    darkMode: "class",
     safelist: ["isToggled"],
     theme: {
       fontFamily: {
@@ -23,7 +23,7 @@ module.exports = {
     plugins: [
         themer({
             palette: {
-                extend : "nature"
+                extend : "trust"
             },
             radius: "smoothest",
             background: "light",
