@@ -1,5 +1,4 @@
 import "./assets/css/tailwind.css";
-
 let switchers = document.querySelectorAll(".switcher");
 if (
   localStorage.getItem("color-theme") === "dark" ||
@@ -32,3 +31,20 @@ switchers.forEach((switcher) => {
     }
   });
 });
+
+  const accordionButtons = document.querySelectorAll(`button[aria-controls^="accordion-collapse-body-"]`)
+  console.log(accordionButtons)
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const accordionBody = document.querySelector(button.getAttribute("data-accordion-target"));
+      console.log(accordionBody)
+      button.classList.toggle("active");
+      accordionBody.classList.toggle("hidden");
+
+      console.log(button.getAttribute("data-last-accordion"))
+
+      if(button.getAttribute("data-last-accordion") == 'true'){
+        button.classList.toggle("rounded-b-xl")
+      }
+    });
+  });
