@@ -99,16 +99,22 @@
                                             <span>Vantagens</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#depoimentos"
                                             class="block md:px-4 transition hover:text-primary-600 dark:hover:text-primary-400">
                                             <span>Depoimentos</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <a href="#plano"
                                             class="block md:px-4 transition hover:text-primary-600 dark:hover:text-primary-400">
                                             <span>Preço</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#faq"
+                                            class="block md:px-4 transition hover:text-primary-600 dark:hover:text-primary-400">
+                                            <span>FAQ</span>
                                         </a>
                                     </li>
                                     <li>
@@ -315,7 +321,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="sobre">
                 <div class="pt-36">
                     <div class="mx-auto px-6 max-w-6xl text-gray-500">
                         <div class="grid gap-12 md:gap-0 md:grid-cols-2 lg:grid-cols-5 items-center lg:gap-24">
@@ -487,7 +493,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="vantagens">
                 <div class="pt-36">
                     <div class="mx-auto px-6 max-w-6xl text-gray-500">
                         <div class="text-center">
@@ -686,33 +692,25 @@
                                     <div class="flex gap-2 items-center">
                                         <div
                                             class="border border-success-500/10 flex relative *:relative *:size-6 *:m-auto size-12 rounded-[calc(var(--card-border-radius)/2)] dark:bg-gray-900 dark:border-white/15 before:rounded-[calc((var(--card-border-radius)/2)-1px)] before:absolute before:inset-0 before:border-t before:border-white before:from-success-100 dark:before:border-white/20 before:bg-gradient-to-b dark:before:from-white/10 dark:before:to-transparent before:shadow dark:before:shadow-gray-950">
-                                            <svg class="text-success-700" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 256 256">
+                                            <svg class="text-success-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                                                 <rect width="256" height="256" fill="none" />
-                                                <circle class="fill-success-700" cx="128" cy="128" r="96"
-                                                    opacity="0.2" />
-                                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor"
+                                                <circle class="fill-success-700" cx="128" cy="128" r="96" opacity="0.2" />
+                                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="16" />
+                                                <path d="M168,128c0,64-40,96-40,96s-40-32-40-96,40-96,40-96S168,64,168,128Z" fill="none" stroke="currentColor"
                                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
-                                                <circle class="fill-success-700" cx="128" cy="80" r="16" />
-                                                <line x1="80" y1="112" x2="176" y2="112" fill="none"
-                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="16" />
-                                                <polyline points="160 184 128 136 96 184" fill="none"
-                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="16" />
-                                                <line x1="128" y1="112" x2="128" y2="136" fill="none"
-                                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="16" />
+                                                <line x1="37.46" y1="96" x2="218.54" y2="96" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="16" />
+                                                <line x1="37.46" y1="160" x2="218.54" y2="160" fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="16" />
                                             </svg>
                                         </div>
 
-                                        <h3 class="text-xl text-success-900 dark:text-white font-semibold">Fácil Acesso
-                                        </h3>
+                                        <h3 class="text-xl text-success-900 dark:text-white font-semibold">Totalmente online</h3>
                                     </div>
 
                                     <div class="mt-6 pb-6 rounded-b-[--card-border-radius]">
-                                        <p class="text-gray-700 dark:text-gray-300">Seus dados mais importantes a poucos
-                                            cliques de distância.</p>
+                                        <p class="text-gray-700 dark:text-gray-300">Sistema online sem instalações desnecessárias, pode ser acessado em qualquer lugar por qualquer dispositivo.</p>
                                     </div>
                                 </div>
                             </div>
@@ -721,11 +719,11 @@
                 </div>
             </section>
             <section id="plano">
-                <div class="py-36">
+                <div class="py-24">
                     <div class="mx-auto px-6 max-w-6xl text-gray-500">
                         <div class="text-center">
                             <h2 class="text-3xl text-gray-950 dark:text-white font-semibold">Plano</h2>
-                            <p class="mt-6 text-gray-700 dark:text-gray-300">Sem letra miúdas e sem <span
+                            <p class="mt-6 text-gray-700 dark:text-gray-300">Sem letras miúdas e sem <span
                                     class="italic">blábláblá</span>, um plano direto ao ponto.</p>
                         </div>
                         <div class="mt-12 grid lg:grid-cols-3 gap-3">
@@ -847,12 +845,12 @@
                     </div>
                 </div>
             </section>
-            <section id="plano">
-                <div class="py-36">
+            <section id="faq">
+                <div class="py-16">
                     <div class="mx-auto px-6 max-w-6xl text-gray-500">
                         <div class="text-center">
                             <h2 class="text-3xl text-gray-950 dark:text-white font-semibold">Perguntas Frequentes</h2>
-                            <p class="mt-6 text-gray-700 dark:text-gray-300">Algumas dúvidas que você também pode ter
+                            <p class="mt-6 text-gray-700 dark:text-gray-300">Algumas dúvidas que você também pode ter.
                             </p>
                         </div>
                         <div class="mt-12 ">
