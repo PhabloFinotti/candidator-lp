@@ -44,3 +44,49 @@ switchers.forEach((switcher) => {
       }
     });
   });
+  
+  const modalButtons = document.querySelectorAll(`button[data-toggle="modalForm"]`)
+  const modalBackdrop = document.getElementById('modalFormBackdrop');
+  const modalBody = document.getElementById('modalFormBody');
+  modalButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      if(modalBackdrop.classList.contains('modal-backdrop-leaving')){
+        openModal()
+      }else{
+        closeModal()
+      }
+    });
+  });
+
+  document.addEventListener('keyup', function(e) {
+    if (e.key === "Escape") { 
+      closeModal();
+    }
+  });
+
+  modalBackdrop.addEventListener("click", function () {
+    console.log('clicado')
+    closeModal();
+  })
+
+function openModal(){
+  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  modalBackdrop.parentElement.classList.remove('hidden')
+  modalBackdrop.classList.remove("modal-backdrop-leaving");
+  modalBackdrop.classList.add("modal-backdrop-entering");
+  modalBody.classList.remove("modal-leaving");
+  modalBody.classList.add("modal-entering");
+}
+
+function closeModal(){
+  document.getElementsByTagName('body')[0].style.overflow = 'auto';
+  modalBackdrop.classList.remove("modal-backdrop-entering");
+  modalBackdrop.classList.add("modal-backdrop-leaving");
+  modalBody.classList.remove("modal-entering") 
+  modalBody.classList.add("modal-leaving");
+  setTimeout(() => {
+    modalBackdrop.parentElement.classList.add('hidden')
+  }, 300);
+}
+
+

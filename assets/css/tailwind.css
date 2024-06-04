@@ -42,11 +42,11 @@
     font-display: swap;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     @apply !bg-gray-200 dark:!bg-gray-700 !opacity-100;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     @apply !bg-gray-950 dark:!bg-white;
 }
 
@@ -54,4 +54,112 @@
     to {
         offset-distance: 100%;
     }
+}
+
+.modal-backdrop-entering {
+    animation: modalBackdropEntering ease-out 300ms forwards;
+}
+
+.modal-backdrop-leaving {
+    animation: modalBackdropLeaving ease-in 300ms forwards;
+}
+
+.modal-entering {
+    animation: modalEntering ease-out 300ms forwards;
+}
+
+.modal-leaving {
+    animation: modalLeaving ease-in 300ms forwards;
+}
+
+@keyframes modalBackdropEntering {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalBackdropLeaving {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modalEntering {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem) scale(0.95);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes modalLeaving {
+    0% {
+        opacity: 100;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(2rem) scale(0.95);
+    }
+}
+
+/* Convertkit */
+.formkit-form{
+    @apply !border-none sm:!py-10;
+    border: none !important;
+}
+
+.formkit-header h2{
+    margin-top: 0 !important;
+}
+:not(.dark) .formkit-form input{
+    @apply !border-gray-300 !border !bg-gray-100;
+
+}
+
+.dark .formkit-form{
+    @apply !bg-gray-800;
+}
+
+.dark .formkit-header{
+ color: #fff !important;
+}
+
+
+.dark .formkit-subheader{
+ color: #cbd5e1 !important;
+}
+
+.formkit-guarantee,
+.formkit-powered-by-convertkit-container{
+ display: none !important;
+}
+/* Convertkit */
+
+@keyframes bounce {
+  0%, 100% {
+    scale: 1;
+    font-size: 1rem;
+  }
+  50% {
+    scale: 1.02;
+    font-size: 1.02rem;
+  }
+}
+
+button.animate-bounce{
+    animation-duration: 1500ms;
 }
