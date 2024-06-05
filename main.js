@@ -1,4 +1,24 @@
 import "./assets/css/tailwind.css";
+
+const menuMobile = document.getElementById('menuMobile')
+document.getElementById('menu').addEventListener('click', function(){
+  document.getElementById('menu').classList.toggle('active')
+  menuMobile.classList.toggle('active')
+})
+
+const menuMobileLinks = document.querySelectorAll('ul li a')
+
+menuMobileLinks.forEach((link) => {
+  link.addEventListener('click', function(){
+    if(menuMobile.classList.contains('active')){
+      document.getElementById('menu').classList.toggle('active')
+      menuMobile.classList.toggle('active')
+    }
+  })
+})
+
+
+
 let switchers = document.querySelectorAll(".switcher");
 if (
   localStorage.getItem("color-theme") === "dark" ||
