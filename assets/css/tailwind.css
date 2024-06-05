@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --ti-cursor-color: #0e44b9;
+    --ti-cursor-font-size: 2.6rem;
+    --ti-cursor-transform: translateY(-.125em);
+}
+
 @font-face {
     font-family: 'Geist';
     src: url('/fonts/Geist-Bold.otf') format('opentype');
@@ -41,6 +48,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 
 .swiper-pagination-bullet {
     @apply !bg-gray-200 dark:!bg-gray-700 !opacity-100;
